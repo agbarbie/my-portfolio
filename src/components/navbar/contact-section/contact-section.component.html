@@ -1,175 +1,152 @@
 <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="glow-text">Get In <span class="highlight">Touch</span></h2>
-        <p class="section-description">
-          Have a project in mind or want to collaborate? Feel free to reach out to me through any of the channels
-          below or by filling out the contact form.
-        </p>
-      </div>
-  
-      <div class="contact-container">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <div class="info-card">
-            <h3 class="info-title">Contact Information</h3>
-  
-            <div class="info-list">
-              <div class="info-item">
-                <div class="info-icon">
-                  <lucide-icon [icon]="mapPinIcon" class="icon-medium"></lucide-icon>
-                </div>
-                <div class="info-content">
-                  <h4 class="info-label">Location</h4>
-                  <p class="info-text">Nyeri, Kenya</p>
-                </div>
+  <div class="container">
+    <div class="section-title">
+      <h2 class="glow-text">Get In <span class="highlight">Touch</span></h2>
+      <p class="section-description">
+        Have a project in mind or want to collaborate? Feel free to reach out to me through any of the channels
+        below or by filling out the contact form.
+      </p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-card">
+          <h3 class="info-title">Contact Information</h3>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot icon-medium"></i>
               </div>
-  
-              <div class="info-item">
-                <div class="info-icon">
-                  <lucide-icon [icon]="phoneIcon" class="icon-medium"></lucide-icon>
-                </div>
-                <div class="info-content">
-                  <h4 class="info-label">Phone</h4>
-                  <p class="info-text">+254 055 241 40</p>
-                </div>
-              </div>
-  
-              <div class="info-item">
-                <div class="info-icon">
-                  <lucide-icon [icon]="mailIcon" class="icon-medium"></lucide-icon>
-                </div>
-                <div class="info-content">
-                  <h4 class="info-label">Email</h4>
-                  <p class="info-text">barbarawangui2002&#64;gmail.com</p>
-                </div>
+              <div class="info-content">
+                <h4 class="info-label">Location</h4>
+                <p class="info-text">Nyeri, Kenya</p>
               </div>
             </div>
-  
-            <div class="social-links">
-              <h4 class="social-title">Follow Me</h4>
-              <div class="social-icons">
-                <a href="#BarbaraWangui" class="social-icon">
-                  <lucide-icon [icon]="linkedinIcon" class="icon-medium"></lucide-icon>
-                </a>
-                <a href="#BarbaraWangui" class="social-icon">
-                  <lucide-icon [icon]="twitterIcon" class="icon-medium"></lucide-icon>
-                </a>
-                <a href="#cue5378" class="social-icon">
-                  <lucide-icon [icon]="instagramIcon" class="icon-medium"></lucide-icon>
-                </a>
-                <a href="#agbarbie" class="social-icon">
-                  <lucide-icon [icon]="githubIcon" class="icon-medium"></lucide-icon>
-                </a>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-phone icon-medium"></i>
+              </div>
+              <div class="info-content">
+                <h4 class="info-label">Phone</h4>
+                <p class="info-text">+254 055 241 40</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-envelope icon-medium"></i>
+              </div>
+              <div class="info-content">
+                <h4 class="info-label">Email</h4>
+                <p class="info-text">barbarawangui2002&#64;gmail.com</p>
               </div>
             </div>
           </div>
+
+          <div class="social-links">
+            <h4 class="social-title">Follow Me</h4>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/barbara-wangui-3a0bb4278/" class="social-icon">
+                <i class="fa-brands fa-linkedin-in icon-medium"></i>
+              </a>
+              <a href="https://x.com/WanguiBarb49047" class="social-icon">
+                <i class="fa-brands fa-twitter icon-medium"></i>
+              </a>
+              <a href="https://www.instagram.com/cue5378" class="social-icon">
+                <i class="fa-brands fa-instagram icon-medium"></i>
+              </a>
+              <a href="https://github.com/agbarbie" class="social-icon">
+                <i class="fa-brands fa-github icon-medium"></i>
+              </a>
+            </div>
+          </div>
         </div>
-  
-        <!-- Contact Form -->
-        <div class="contact-form">
-          <div class="form-card">
-            <h3 class="form-title">Send Me a Message</h3>
-  
-            <form (ngSubmit)="onSubmit()">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name" class="form-label">Your Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    [(ngModel)]="formData.name"
-                    placeholder="John Doe"
-                    required
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">Your Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    [(ngModel)]="formData.email"
-                    placeholder="john@example.com"
-                    required
-                    class="form-input"
-                  />
-                </div>
-              </div>
-  
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <div class="form-card">
+          <h3 class="form-title">Send Me a Message</h3>
+
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-row">
               <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
+                <label for="name" class="form-label">Your Name</label>
                 <input
-                  id="subject"
-                  name="subject"
-                  [(ngModel)]="formData.subject"
-                  placeholder="Project Inquiry"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="formData.name"
+                  placeholder="John Doe"
                   required
                   class="form-input"
                 />
               </div>
-  
               <div class="form-group">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  [(ngModel)]="formData.message"
-                  placeholder="Hello, I'd like to discuss a project..."
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  [(ngModel)]="formData.email"
+                  placeholder="john@example.com"
                   required
-                  class="form-textarea"
-                ></textarea>
+                  class="form-input"
+                />
               </div>
-  
-              <button
-                type="submit"
-                class="btn btn-primary submit-btn"
-                [disabled]="isSubmitting"
-              >
-                <ng-container *ngIf="isSubmitting">
-                  <svg
-                    class="spinner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      class="spinner-circle"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      stroke-width="4"
-                    ></circle>
-                    <path
-                      class="spinner-path"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                  Sending...
-                </ng-container>
-                <ng-container *ngIf="submitSuccess">
-                  <svg
-                    class="check-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Message Sent!
-                </ng-container>
-                <ng-container *ngIf="!isSubmitting && !submitSuccess">
-                  <lucide-icon [icon]="sendIcon" class="icon-left"></lucide-icon>
-                  Send Message
-                </ng-container>
-              </button>
-            </form>
-          </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                id="subject"
+                name="subject"
+                [(ngModel)]="formData.subject"
+                placeholder="Project Inquiry"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                [(ngModel)]="formData.message"
+                placeholder="Hello, I'd like to discuss a project..."
+                required
+                class="form-textarea"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary submit-btn"
+              [disabled]="isSubmitting"
+            >
+              <ng-container *ngIf="isSubmitting">
+                <div class="spinner-container">
+                  <i class="fa-solid fa-spinner fa-spin"></i>
+                  <span>Sending...</span>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="submitSuccess">
+                <div class="success-container">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Message Sent!</span>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!isSubmitting && !submitSuccess">
+                <i class="fa-solid fa-paper-plane icon-left"></i>
+                <span>Send Message</span> 
+              </ng-container>
+            </button>
+          </form>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

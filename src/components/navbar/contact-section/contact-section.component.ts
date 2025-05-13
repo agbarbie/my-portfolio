@@ -1,27 +1,15 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { LucideAngularModule, Send, MapPin, Phone, Mail, Linkedin, Twitter, Instagram, Github } from 'lucide-angular';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [CommonModule, FormsModule, LucideAngularModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact-section.component.html',
-  styleUrls: ['./contact-section.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrls: ['./contact-section.component.css']
 })
 export class ContactSectionComponent {
-  // Icons
-  sendIcon = Send;
-  mapPinIcon = MapPin;
-  phoneIcon = Phone;
-  mailIcon = Mail;
-  linkedinIcon = Linkedin;
-  twitterIcon = Twitter;
-  instagramIcon = Instagram;
-  githubIcon = Github;
-
   formData = {
     name: '',
     email: '',

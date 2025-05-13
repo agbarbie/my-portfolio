@@ -13,53 +13,53 @@ export class PhotoGalleryComponent {
   galleryImages = [
     {
       id: 1,
-      src: 'assets/images/placeholder.jpg',
+      src: 'assets/graduation.png',
       alt: 'Barbara at design conference',
     },
     {
       id: 2,
-      src: 'assets/images/placeholder.jpg',
+      src: 'assets/barb.JPG',
       alt: 'Working on a project',
     },
     {
       id: 3,
-      src: 'assets/images/placeholder.jpg',
+      src: 'assets/moderatingevent.png',
       alt: 'Speaking at tech event',
     },
     {
       id: 4,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Design workshop',
+      src: 'assets/moderating.png',
+      alt: 'Speaking at tech event',
     },
     {
       id: 5,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Team collaboration',
+      src: 'assets/networking.png',
+      alt: 'Design workshop',
     },
     {
       id: 6,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Award ceremony',
+      src: 'assets/dekutmarketing.png',
+      alt: 'Dekut Marketing',
     },
     {
       id: 7,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Client meeting',
+      src: 'assets/customerservice.png',
+      alt: 'Customer service',
     },
     {
       id: 8,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Creative process',
+      src: 'assets/mentorship.png',
+      alt: 'Mentorship',
     },
     {
       id: 9,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Portfolio showcase',
+      src: 'assets/dataafrica.png',
+      alt: 'Data Africa Event at Dekut',
     },
     {
       id: 10,
-      src: 'assets/images/placeholder.jpg',
-      alt: 'Networking event',
+      src: 'assets/team.png',
+      alt: 'Team of Developers',
     },
   ];
 
