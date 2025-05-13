@@ -1,0 +1,62 @@
+<section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">My <span class="highlight">Projects</span></h2>
+        <p class="section-description">
+          Browse through my recent projects spanning design, development, and marketing. Each project represents my
+          commitment to excellence and innovation.
+        </p>
+      </div>
+  
+      <!-- Filter Categories -->
+      <div class="filter-categories">
+        <button
+          *ngFor="let category of categories"
+          (click)="setActiveCategory(category.id)"
+          class="filter-btn"
+          [ngClass]="{'active-filter': activeCategory === category.id}"
+        >
+          {{ category.name }}
+        </button>
+      </div>
+  
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <div
+          *ngFor="let project of filteredProjects"
+          class="project-card"
+        >
+          <div class="project-image-container">
+            <img [src]="project.image" [alt]="project.title" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech">
+                <span *ngFor="let tech of project.technologies" class="tech-tag">
+                  {{ tech }}
+                </span>
+              </div>
+              <a [href]="project.link" class="project-link">
+                View Project 
+                <lucide-icon [icon]="externalLinkIcon" class="icon-small"></lucide-icon>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <span class="category-dot" [ngClass]="getCategoryClass(project.category)"></span>
+              <span class="category-name">{{ project.category }}</span>
+            </div>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- View All Projects Button -->
+      <div class="view-all">
+        <button class="btn btn-primary glow">
+          View All Projects
+          <lucide-icon [icon]="arrowRightIcon" class="icon-right"></lucide-icon>
+        </button>
+      </div>
+    </div>
+  </section>

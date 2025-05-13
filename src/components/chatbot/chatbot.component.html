@@ -1,0 +1,72 @@
+<div class="chatbot-container" [ngClass]="{'chatbot-open': isOpen}">
+    <!-- Chat Button -->
+    <button class="chat-button" (click)="toggleChat()" [attr.aria-expanded]="isOpen">
+      <div class="chat-button-content">
+        <div *ngIf="!isOpen" class="chat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div *ngIf="isOpen" class="close-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </div>
+        <span class="chat-button-text">{{ isOpen ? 'Close Chat' : 'Chat with Barbara\'s AI' }}</span>
+      </div>
+    </button>
+    
+    <!-- Chat Window -->
+    <div class="chat-window">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <div class="avatar-circle">B</div>
+        </div>
+        <div class="chat-info">
+          <h3 class="chat-title">Barbara's Assistant</h3>
+          <p class="chat-status">Online</p>
+        </div>
+      </div>
+      
+      <!-- Chat Messages -->
+      <div class="chat-messages" #chatMessages>
+        <div *ngFor="let message of messages" 
+             class="message" 
+             [ngClass]="{'user-message': message.isUser, 'bot-message': !message.isUser}">
+          <div class="message-content">
+            <p class="message-text">{{ message.text }}</p>
+            <span class="message-time">{{ formatTime(message.timestamp) }}</span>
+          </div>
+        </div>
+        
+        <!-- Typing Indicator -->
+        <div *ngIf="isTyping" class="message bot-message">
+          <div class="message-content">
+            <div class="typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="chat-input">
+        <input 
+          type="text" 
+          [(ngModel)]="newMessage" 
+          placeholder="Type your message..." 
+          (keyup.enter)="sendMessage()"
+        />
+        <button class="send-button" (click)="sendMessage()" [disabled]="!newMessage.trim()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>

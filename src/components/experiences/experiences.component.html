@@ -1,0 +1,40 @@
+<section id="experiences" class="experiences-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">Work <span class="highlight">Experience</span></h2>
+        <p class="section-description">
+          My professional journey has equipped me with a diverse skill set and valuable industry insights.
+        </p>
+      </div>
+  
+      <div class="timeline">
+        <div *ngFor="let experience of experiences; let i = index" class="timeline-item" [ngClass]="{'timeline-item-right': i % 2 !== 0}">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header">
+                <h3 class="experience-position">{{ experience.position }}</h3>
+                <span class="experience-date">{{ experience.startDate }} - {{ experience.current ? 'Present' : experience.endDate }}</span>
+              </div>
+              
+              <div class="experience-company">
+                <span class="company-name">{{ experience.company }}</span>
+                <span class="company-location">{{ experience.location }}</span>
+              </div>
+              
+              <p class="experience-description">{{ experience.description }}</p>
+              
+              <div class="experience-responsibilities">
+                <h4 class="responsibilities-title">Key Responsibilities:</h4>
+                <ul class="responsibilities-list">
+                  <li *ngFor="let responsibility of experience.responsibilities" class="responsibility-item">
+                    {{ responsibility }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

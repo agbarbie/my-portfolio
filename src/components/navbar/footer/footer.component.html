@@ -1,0 +1,96 @@
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Logo and About -->
+        <div class="footer-about">
+          <a href="/" class="footer-logo">
+            <div class="logo-circle">
+              <div class="logo-bg"></div>
+              <div class="logo-inner">
+                <span class="logo-text">B</span>
+              </div>
+            </div>
+            <span class="brand-name">Barb Company</span>
+          </a>
+          <p class="about-text">
+            Creating exceptional digital experiences through design, development, and marketing.
+          </p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="links-list">
+            <li>
+              <a href="#home" class="footer-link">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="footer-link">About</a>
+            </li>
+            <li>
+              <a href="#skills" class="footer-link">Skills</a>
+            </li>
+            <li>
+              <a href="#projects" class="footer-link">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Services -->
+        <div class="footer-services">
+          <h3 class="footer-title">Services</h3>
+          <ul class="links-list">
+            <li>
+              <a href="#" class="footer-link">UI/UX Design</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Web Development</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Mobile App Design</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Digital Marketing</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Brand Identity</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h3 class="footer-title">Newsletter</h3>
+          <p class="newsletter-text">Subscribe to my newsletter for the latest updates and insights.</p>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="newsletter-input"
+            />
+            <button type="submit" class="newsletter-btn">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <hr class="footer-divider" />
+  
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; {{ currentYear }} Barbara Wangui. All rights reserved.
+        </p>
+        <button
+          (click)="scrollToTop()"
+          class="scroll-top-btn"
+          aria-label="Scroll to top"
+        >
+          <lucide-icon [icon]="arrowUpIcon" class="icon-medium"></lucide-icon>
+        </button>
+      </div>
+    </div>
+  </footer>

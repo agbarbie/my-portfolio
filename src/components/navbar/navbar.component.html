@@ -1,0 +1,46 @@
+<header class="navbar" [ngClass]="{'navbar-scrolled': scrolled}">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="/" class="navbar-logo">
+          <div class="logo-circle">
+            <div class="logo-bg"></div>
+            <div class="logo-inner">
+              <span class="logo-text">B</span>
+            </div>
+          </div>
+          <span class="brand-name">Barb Company</span>
+        </a>
+  
+        <!-- Desktop Navigation -->
+        <nav class="navbar-nav desktop-nav">
+          <ng-container *ngFor="let link of navLinks">
+            <a [href]="link.href" class="nav-link">{{ link.name }}</a>
+          </ng-container>
+          <button class="btn btn-primary download-btn">
+            <lucide-icon [icon]="downloadIcon" class="icon-left"></lucide-icon>
+            Download CV
+          </button>
+        </nav>
+  
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+          <lucide-icon [icon]="isMenuOpen ? closeIcon : menuIcon" [size]="24"></lucide-icon>
+        </button>
+      </div>
+  
+      <!-- Mobile Navigation -->
+      <div *ngIf="isMenuOpen" class="mobile-nav">
+        <div class="mobile-nav-content">
+          <ng-container *ngFor="let link of navLinks">
+            <a [href]="link.href" class="mobile-nav-link" (click)="isMenuOpen = false">
+              {{ link.name }}
+            </a>
+          </ng-container>
+          <button class="btn btn-primary download-btn mobile-btn">
+            <lucide-icon [icon]="downloadIcon" class="icon-left"></lucide-icon>
+            Download CV
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>

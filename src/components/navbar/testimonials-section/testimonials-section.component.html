@@ -1,0 +1,32 @@
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">Client <span class="highlight">Testimonials</span></h2>
+        <p class="section-description">
+          Don't just take my word for it. Here's what my clients have to say about working with me.
+        </p>
+      </div>
+  
+      <div class="testimonials-grid">
+        <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+          <div class="quote-icon">
+            <lucide-icon [icon]="quoteIcon" class="icon-large rotate-180"></lucide-icon>
+          </div>
+  
+          <div class="testimonial-content">
+            <p class="testimonial-quote">{{ testimonial.quote }}</p>
+          </div>
+  
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img [src]="testimonial.image" [alt]="testimonial.name" class="author-img">
+            </div>
+            <div class="author-info">
+              <h4 class="author-name">{{ testimonial.name }}</h4>
+              <p class="author-position">{{ testimonial.position }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

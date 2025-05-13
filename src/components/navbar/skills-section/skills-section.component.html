@@ -1,0 +1,116 @@
+<section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">Skills & <span class="highlight">Tools</span></h2>
+        <p class="section-description">
+          My expertise spans across design, development, and marketing, allowing me to create comprehensive digital
+          solutions that address all aspects of your online presence.
+        </p>
+      </div>
+  
+      <div class="skills-grid">
+        <!-- Design Skills -->
+        <div class="skill-card">
+          <div class="skill-icon design-icon">
+            <lucide-icon [icon]="paletteIcon" class="icon"></lucide-icon>
+          </div>
+          <h3 class="skill-title">Design</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of designSkills" class="skill-item">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress design-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Development Skills -->
+        <div class="skill-card">
+          <div class="skill-icon dev-icon">
+            <lucide-icon [icon]="codeIcon" class="icon"></lucide-icon>
+          </div>
+          <h3 class="skill-title">Development</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of developmentSkills" class="skill-item">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress dev-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Marketing Skills -->
+        <div class="skill-card">
+          <div class="skill-icon marketing-icon">
+            <lucide-icon [icon]="lineChartIcon" class="icon"></lucide-icon>
+          </div>
+          <h3 class="skill-title">Marketing</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of marketingSkills" class="skill-item">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress marketing-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analysis Skills -->
+<div class="skill-card">
+  <div class="skill-icon data-icon">
+    <lucide-icon [icon]="barChartIcon" class="icon"></lucide-icon>
+  </div>
+  <h3 class="skill-title">Data Analysis</h3>
+
+  <div class="skill-list">
+    <div *ngFor="let skill of dataSkills" class="skill-item">
+      <div class="skill-header">
+        <div class="skill-name">
+          <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+          <span>{{ skill.name }}</span>
+        </div>
+        <span class="skill-percentage">{{ skill.level }}%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress data-progress" [style.width.%]="skill.level"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+      <!-- Tools -->
+      <div class="tools-section">
+        <h3 class="tools-title">Tools & Technologies</h3>
+        <div class="tools-list">
+          <span *ngFor="let tool of tools" class="tool-tag">
+            {{ tool }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>

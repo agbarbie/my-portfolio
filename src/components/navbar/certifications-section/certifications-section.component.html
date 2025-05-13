@@ -1,0 +1,71 @@
+<section id="certifications" class="certifications-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">Education & <span class="highlight">Certifications</span></h2>
+        <p class="section-description">
+          My educational background and professional certifications demonstrate my commitment to continuous learning
+          and excellence in my field.
+        </p>
+      </div>
+  
+      <!-- Education -->
+      <div class="education-section">
+        <h3 class="subsection-title">Education</h3>
+        <div class="education-list">
+          <div *ngFor="let edu of education" class="education-card">
+            <div class="education-content">
+              <div class="education-icon">
+                <div class="icon-circle">
+                  <lucide-icon [icon]="graduationCapIcon" class="icon-medium"></lucide-icon>
+                </div>
+              </div>
+              <div class="education-details">
+                <h4 class="education-degree">{{ edu.degree }}</h4>
+                <div class="education-meta">
+                  <div class="meta-item">
+                    <lucide-icon [icon]="bookOpenIcon" class="icon-small purple-icon"></lucide-icon>
+                    <span>{{ edu.institution }}</span>
+                  </div>
+                  <div class="meta-item">
+                    <lucide-icon [icon]="calendarIcon" class="icon-small orange-icon"></lucide-icon>
+                    <span>{{ edu.years }}</span>
+                  </div>
+                </div>
+                <p class="education-description">{{ edu.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Certifications -->
+      <div class="certifications-container">
+        <h3 class="subsection-title">Certifications</h3>
+        <div class="certifications-grid">
+          <div *ngFor="let cert of certifications" class="certification-card">
+            <div class="certification-image">
+              <img [src]="cert.image" [alt]="cert.organization" class="cert-img">
+            </div>
+            <h4 class="certification-title">{{ cert.title }}</h4>
+            <p class="certification-org">{{ cert.organization }}</p>
+            <div class="certification-date">
+              <lucide-icon [icon]="calendarIcon" class="icon-tiny"></lucide-icon>
+              <span>{{ cert.date }}</span>
+            </div>
+            <a [href]="cert.link" class="certification-link">
+              View Certificate 
+              <lucide-icon [icon]="externalLinkIcon" class="icon-tiny"></lucide-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Download CV Button -->
+      <div class="download-section">
+        <button class="btn btn-primary glow">
+          View All Certificates
+          <lucide-icon [icon]="externalLinkIcon" class="icon-right"></lucide-icon>
+        </button>
+      </div>
+    </div>
+  </section>
