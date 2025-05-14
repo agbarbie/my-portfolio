@@ -120,10 +120,10 @@ export class ProjectsSectionComponent {
       id: 11,
       title: 'Books library',
       description: 'A library management system that allows users to search, borrow, and return books online.',
-      image: 'assets/dekutmarketing.png',
+      image: 'assets/book.png',
       category: 'development',
       technologies: ['Express,Html, Css,Typescript'],
-      link: '',
+      link: 'assets/booksvideo.mp4',
     }
   ];
 
