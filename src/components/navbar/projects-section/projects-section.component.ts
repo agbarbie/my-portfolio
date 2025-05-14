@@ -123,7 +123,16 @@ export class ProjectsSectionComponent {
       image: 'assets/book.png',
       category: 'development',
       technologies: ['Express,Html, Css,Typescript'],
-      link: 'assets/booksvideo.mp4',
+      link: '',
+    },
+    {
+      id: 12,
+      title: 'SkillmatchesAI',
+      description: 'A library management system that allows users to search, borrow, and return books online.',
+      image: 'assets/ux.png',
+      category: 'development',
+      technologies: ['Express,Angular version 19,Typescript'],
+      link: '',
     }
   ];
 
