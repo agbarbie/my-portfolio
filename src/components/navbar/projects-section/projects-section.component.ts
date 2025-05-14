@@ -1,21 +1,16 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, ExternalLink, ArrowRight } from 'lucide-angular';
 import { Project } from '../../../Interfaces/project';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule],
   templateUrl: './projects-section.component.html',
   styleUrls: ['./projects-section.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProjectsSectionComponent {
-  // Icons
-  externalLinkIcon = ExternalLink;
-  arrowRightIcon = ArrowRight;
-
   activeCategory = 'all';
 
   categories = [

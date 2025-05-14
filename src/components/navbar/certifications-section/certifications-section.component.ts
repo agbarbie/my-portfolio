@@ -1,23 +1,18 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, ExternalLink, Calendar, GraduationCap, BookOpen } from 'lucide-angular';
 import { Certification } from '../../../Interfaces/certifications';
 import { Education } from '../../../Interfaces/Education';
 
 @Component({
   selector: 'app-certifications-section',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule],
   templateUrl: './certifications-section.component.html',
   styleUrls: ['./certifications-section.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CertificationsSectionComponent {
-  // Icons
-  externalLinkIcon = ExternalLink;
-  calendarIcon = Calendar;
-  graduationCapIcon = GraduationCap;
-  bookOpenIcon = BookOpen;
+  
 
   certifications: Certification[] = [
     {

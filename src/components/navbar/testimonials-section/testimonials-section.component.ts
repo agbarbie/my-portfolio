@@ -1,19 +1,17 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, Quote } from 'lucide-angular';
 import { Testimonial } from '../../../Interfaces/testimonials';
 
 @Component({
   selector: 'app-testimonials-section',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule],
   templateUrl: './testimonials-section.component.html',
   styleUrls: ['./testimonials-section.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TestimonialsSectionComponent {
-  // Icons
-  quoteIcon = Quote;
+
 
   testimonials: Testimonial[] = [
     {

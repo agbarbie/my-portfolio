@@ -21,7 +21,7 @@
             <div *ngFor="let skill of designSkills" class="skill-item">
               <div class="skill-header">
                 <div class="skill-name">
-                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <i class="fa-solid fa-figma icon"></i>
                   <span>{{ skill.name }}</span>
                 </div>
                 <span class="skill-percentage">{{ skill.level }}%</span>
@@ -44,7 +44,7 @@
             <div *ngFor="let skill of developmentSkills" class="skill-item">
               <div class="skill-header">
                 <div class="skill-name">
-                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <i class="fa-solid fa-code icon"></i>
                   <span>{{ skill.name }}</span>
                 </div>
                 <span class="skill-percentage">{{ skill.level }}%</span>
@@ -67,7 +67,7 @@
             <div *ngFor="let skill of marketingSkills" class="skill-item">
               <div class="skill-header">
                 <div class="skill-name">
-                  <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+                  <i class="fa-solid fa-shop icon"></i>
                   <span>{{ skill.name }}</span>
                 </div>
                 <span class="skill-percentage">{{ skill.level }}%</span>
@@ -91,7 +91,7 @@
     <div *ngFor="let skill of dataSkills" class="skill-item">
       <div class="skill-header">
         <div class="skill-name">
-          <lucide-icon [icon]="getIcon(skill.icon)" class="skill-icon-small"></lucide-icon>
+          <i class="fa-solid fa-database icon"></i>
           <span>{{ skill.name }}</span>
         </div>
         <span class="skill-percentage">{{ skill.level }}%</span>
