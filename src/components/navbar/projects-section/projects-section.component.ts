@@ -116,6 +116,15 @@ export class ProjectsSectionComponent {
       technologies: ['Bronchure','Career Talk'],
       link: '',
     },
+     {
+      id: 11,
+      title: 'Books library',
+      description: 'A library management system that allows users to search, borrow, and return books online.',
+      image: 'assets/dekutmarketing.png',
+      category: 'development',
+      technologies: ['Express,Html, Css,Typescript'],
+      link: '',
+    }
   ];
 
   get filteredProjects() {
