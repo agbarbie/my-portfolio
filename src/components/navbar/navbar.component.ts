@@ -18,7 +18,6 @@ export class NavbarComponent {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
-    {name:  'Chatbot', href: '#chatbot'},
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#certifications' },
     { name: 'Testimonials', href: '#testimonials' },
