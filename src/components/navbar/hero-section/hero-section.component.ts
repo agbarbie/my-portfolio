@@ -10,24 +10,19 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HeroSectionComponent {
-  /**
-   * Handles the resume download functionality
-   */
+
   downloadResume(): void {
   
-    const resumeUrl = 'assets/CURRICULUM VITAE1 2.docx'; // Update with the correct path to your resume file
-    
-
+    const resumeUrl = 'assets/CURRICULUM VITAE1 2.docx'; 
     const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'https://drive.google.com/file/d/1ZiyhaRaKpKhB0Y2ccjpARrrkrxGy2L-_/view?usp=sharing'; // Specify the desired file name
+    link.href = 'https://drive.google.com/file/d/1ZiyhaRaKpKhB0Y2ccjpARrrkrxGy2L-_/view?usp=sharing';
+    link.download = 'CURRICULUM VITAE1 2.docx'; 
     
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
 
- 
   viewProjects(): void {
     
     const projectsSection = document.getElementById('projects-section');
