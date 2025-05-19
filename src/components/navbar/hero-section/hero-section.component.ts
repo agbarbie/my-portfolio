@@ -20,7 +20,7 @@ export class HeroSectionComponent {
 
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'https://docs.google.com/document/d/12Z0QSdcycU0X6UVHV0nDe5RXZejLtEx7/edit?usp=sharing&ouid=103354002324122913916&rtpof=true&sd=true'; // Specify the desired file name
+    link.download = 'https://drive.google.com/file/d/1ZiyhaRaKpKhB0Y2ccjpARrrkrxGy2L-_/view?usp=sharing'; // Specify the desired file name
     
     document.body.appendChild(link);
     link.click();
