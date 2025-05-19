@@ -12,8 +12,6 @@ import { CommonModule } from '@angular/common';
 export class HeroSectionComponent {
 
   downloadResume(): void {
-  
-    const resumeUrl = 'assets/CURRICULUM VITAE1 2.docx'; 
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/file/d/1ZiyhaRaKpKhB0Y2ccjpARrrkrxGy2L-_/view?usp=sharing';
     link.download = 'CURRICULUM VITAE1 2.docx'; 
