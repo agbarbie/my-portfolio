@@ -23,10 +23,10 @@ export class TestimonialsSectionComponent {
     },
     {
       id: 2,
-      name: 'Michael Chen',
-      position: 'Marketing Director, Innovate Solutions',
-      image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      quote: 'Working with Barbara was a game-changer for our marketing campaigns. Her strategic approach and creative designs helped us stand out in a competitive market. Highly recommended!',
+      name: 'Joshua Musau',
+      position: 'CEO, bluedigital',
+      image: 'assets/Josh.jpg',
+      quote: 'Barbara was exceptional in her delivery. She was efficient, disciplined, punctual and competent in the management of her work. She went over and above the call of duty to deliver the solution we had requested of her. Her understanding of the design component was excellent and concise and she delivered well above our expectation. I unreservedly recommend Barbara Wangui for any technological design work such as branding and/or web design.',
     },
     {
       id: 3,
