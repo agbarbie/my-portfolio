@@ -16,10 +16,10 @@ export class TestimonialsSectionComponent {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Sarah Johnson',
-      position: 'CEO, TechStart Inc.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      quote: 'Barbara transformed our digital presence completely. Her design skills combined with technical expertise delivered a website that exceeded our expectations and significantly improved our conversion rates.',
+      name: 'Johnathan Ndambuki',
+      position: 'Head of Teach2give Trainers',
+      image: 'assets/joe.jpg',
+      quote: 'Working with Barbara Wangui was an excellent experience. I was genuinely impressed by her dedication, technical aptitude, and problem-solving abilities throughout the project. She delivered a clean, functional, and well-designed solution that exceeded expectations. Barbara was professional, communicative, and proactive—often going the extra mile to suggest improvements and ensure the final product was polished and effective. Her commitment to quality and her ability to tackle challenges with confidence truly set her apart. I wouldn’t hesitate to work with her again or recommend her to anyone in need of a skilled and dependable developer.',
     },
     {
       id: 2,
