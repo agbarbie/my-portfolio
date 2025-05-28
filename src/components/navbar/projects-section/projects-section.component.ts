@@ -128,7 +128,16 @@ export class ProjectsSectionComponent {
       category: 'development',
       technologies: ['Express,Angular version 19,Typescript'],
       link: '',
-    }
+    },
+    {
+      id: 13,
+      title: 'FarmEdge AI',
+      description: 'focuses on specific crops or regions, it supports a wide range of farm products while using a smart AI agent to deliver personalized recommendations on pricing, packaging, and market entry strategies.',
+      image: 'assets/products.png',
+      category: 'design',
+      technologies: ['Figma'],
+      link: 'https://www.figma.com/design/v3dr6CR6JN5XKWXFgbYes4/Untitled?m=auto&t=9KerKNWFhyeOxqtE-6',
+    },
   ];
 
   get filteredProjects() {
