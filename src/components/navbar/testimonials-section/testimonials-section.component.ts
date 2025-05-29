@@ -30,10 +30,10 @@ export class TestimonialsSectionComponent {
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      position: 'Founder, StyleHub',
+      name: 'Paul Wamocha',
+      position: 'Mentor & Digital Skill Trainer',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      quote: 'Barbara has an exceptional eye for design and a deep understanding of user experience. She created a beautiful, functional e-commerce platform that our customers love navigating.',
+      quote: 'Barbbara Wangui is standout creative with exceptional skill in AI-Empowered design. I had the pleasure to mentoring her at DEKUT, where she consistently turned knowledge into action-delivering high-quality work under tight deadlines and impressing top clients like Ajinit Agency and Yaya Pizzeria. She has proof that AI is empowering young creatives, and I am proud of the profesional she is becoming.',
     },
   ];
 }
