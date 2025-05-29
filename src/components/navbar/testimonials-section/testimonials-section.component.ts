@@ -32,8 +32,8 @@ export class TestimonialsSectionComponent {
       id: 3,
       name: 'Paul Wamocha',
       position: 'Mentor & Digital Skill Trainer',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPsyApskxydTay87l7QDoHwq5tuBFVn9H0wQ&s',
-      quote: 'Barbbara Wangui is standout creative with exceptional skill in AI-Empowered design. I had the pleasure to mentoring her at DEKUT, where she consistently turned knowledge into action-delivering high-quality work under tight deadlines and impressing top clients like Ajinit Agency and Yaya Pizzeria. She has proof that AI is empowering young creatives, and I am proud of the profesional she is becoming.',
+      image: 'assets/paul.jpg',
+      quote: 'Barbara Wangui is standout creative with exceptional skill in AI-Empowered design. I had the pleasure to mentoring her at DEKUT, where she consistently turned knowledge into action-delivering high-quality work under tight deadlines and impressing top clients like Ajinit Agency and Yaya Pizzeria. She has proof that AI is empowering young creatives, and I am proud of the profesional she is becoming.',
     },
   ];
 }
