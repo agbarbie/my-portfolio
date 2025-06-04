@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-section',
@@ -20,11 +21,29 @@ export class ContactSectionComponent {
   isSubmitting = false;
   submitSuccess = false;
 
-  onSubmit() {
+  constructor() {
+    // Initialize EmailJS with your User ID
+    emailjs.init('YOUR_EMAILJS_USER_ID'); // Replace with your EmailJS User ID
+  }
+
+  async onSubmit() {
     this.isSubmitting = true;
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send email using EmailJS
+      const response: EmailJSResponseStatus = await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        {
+          from_name: this.formData.name,
+          from_email: this.formData.email,
+          subject: this.formData.subject,
+          message: this.formData.message,
+          to_email: 'barbarawangui2002@gmail.com'
+        }
+      );
+
+      console.log('Email sent successfully:', response.status, response.text);
       this.isSubmitting = false;
       this.submitSuccess = true;
 
@@ -38,6 +57,10 @@ export class ContactSectionComponent {
           message: ''
         };
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      this.isSubmitting = false;
+      alert('Failed to send message. Please try again later.');
+    }
   }
 }
