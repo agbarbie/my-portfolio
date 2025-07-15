@@ -134,7 +134,9 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
     } catch (err) {}
   }
 
-  formatTime(date: Date): string {
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  }
+formatTime(date: any): string {
+  const realDate = new Date(date); 
+  return realDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
 }
