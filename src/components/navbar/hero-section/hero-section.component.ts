@@ -13,8 +13,8 @@ export class HeroSectionComponent {
 
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1ZiyhaRaKpKhB0Y2ccjpARrrkrxGy2L-_/view?usp=sharing';
-    link.download = 'CURRICULUM VITAE1 2.docx'; 
+    link.href = 'https://docs.google.com/document/d/1qGE6fUFqj8iHsxZZHX7c9TmR59N4j93Q/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true'
+    link.download = 'MY Resume.docx'; 
     
     document.body.appendChild(link);
     link.click();

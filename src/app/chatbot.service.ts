@@ -19,7 +19,7 @@ export class ChatbotService {
       text: response,
       isUser: false,
       timestamp: new Date()
-    }).pipe(delay(1000)); // Simulate delay
+    }).pipe(delay(1000)); 
   }
 
   private generateResponse(userMessage: string): string {

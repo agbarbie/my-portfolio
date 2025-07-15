@@ -1,5 +1,4 @@
 <div class="chatbot-container" [ngClass]="{'chatbot-open': isOpen}">
-    <!-- Chat Button -->
     <button class="chat-button" (click)="toggleChat()" [attr.aria-expanded]="isOpen">
       <div class="chat-button-content">
         <div *ngIf="!isOpen" class="chat-icon">
@@ -17,9 +16,7 @@
       </div>
     </button>
     
-    <!-- Chat Window -->
     <div class="chat-window">
-      <!-- Chat Header -->
       <div class="chat-header">
         <div class="chat-avatar">
           <div class="avatar-circle">B</div>
@@ -30,7 +27,6 @@
         </div>
       </div>
       
-      <!-- Chat Messages -->
       <div class="chat-messages" #chatMessages>
         <div *ngFor="let message of messages" 
              class="message" 
@@ -40,8 +36,7 @@
             <span class="message-time">{{ formatTime(message.timestamp) }}</span>
           </div>
         </div>
-        
-        <!-- Typing Indicator -->
+      
         <div *ngIf="isTyping" class="message bot-message">
           <div class="message-content">
             <div class="typing-indicator">
@@ -53,7 +48,6 @@
         </div>
       </div>
       
-      <!-- Chat Input -->
       <div class="chat-input">
         <input 
           type="text" 
