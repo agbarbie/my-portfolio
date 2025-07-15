@@ -138,6 +138,15 @@ export class ProjectsSectionComponent {
       technologies: ['Figma'],
       link: 'https://www.figma.com/design/v3dr6CR6JN5XKWXFgbYes4/Untitled?m=auto&t=9KerKNWFhyeOxqtE-6',
     },
+    {
+      id: 14,
+      title: 'Brilliant Minds',
+      description: 'Brilliant Minds is a platform that connects users with mentors in various fields, providing guidance and support for academic and career development.',
+      image: '../../../assets/Brilliantminds.png',
+      category: 'development',
+      technologies: ['Angular version 19,Typescript'],
+      link: 'https://brilliantminds.vercel.app/#impact-details',
+    },
   ];
 
   get filteredProjects() {
