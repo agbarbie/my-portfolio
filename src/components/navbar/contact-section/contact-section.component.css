@@ -13,13 +13,19 @@
     margin: 0 auto;
   }
   
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  
+.contact-container {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* optional: center vertically */
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.contact-card {
+  max-width: 500px;          /* keeps it nicely sized on large screens */
+  width: 100%;               /* so it shrinks well on mobile */
+}
+
   /* Contact Info Styles */
   .info-card {
     background-color: #111827;
@@ -205,11 +211,6 @@
     height: 1rem;
     margin-right: 0.5rem;
   }
-  
-  @media (min-width: 768px) {
-    .contact-container {
-      grid-template-columns: 1fr 2fr;
-    }
     
     .form-row {
       grid-template-columns: repeat(2, 1fr);
@@ -218,5 +219,5 @@
     .submit-btn {
       width: auto;
     }
-  }
+  
   
