@@ -1,38 +1,48 @@
 <header class="navbar" [ngClass]="{'navbar-scrolled': scrolled}">
-    <div class="container">
-      <div class="navbar-content">
-        <a href="/" class="navbar-logo">
-          <div class="logo-circle">
-            <div class="logo-bg"></div>
-            <div class="logo-inner">
-              <span class="logo-text">B</span>
-            </div>
+  <div class="container">
+    <div class="navbar-content">
+      <!-- Logo -->
+      <a href="/" class="navbar-logo">
+        <div class="logo-circle">
+          <div class="logo-bg"></div>
+          <div class="logo-inner">
+            <span class="logo-text">B</span>
           </div>
-          <span class="brand-name">Barb Company</span>
-        </a>
-  
-        <!-- Desktop Navigation -->
-        <nav class="navbar-nav desktop-nav">
-          <ng-container *ngFor="let link of navLinks">
-            <a [href]="link.href" class="nav-link">{{ link.name }}</a>
-          </ng-container>
-        </nav>
-  
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-          <i class="fa fa-bars" *ngIf="!isMenuOpen"></i>
-        </button>
-      </div>
-  
-      <!-- Mobile Navigation -->
-      <div *ngIf="isMenuOpen" class="mobile-nav">
-        <div class="mobile-nav-content">
-          <ng-container *ngFor="let link of navLinks">
-            <a [href]="link.href" class="mobile-nav-link" (click)="isMenuOpen = false">
-              {{ link.name }}
-            </a>
-          </ng-container>
         </div>
+        <span class="brand-name">Barb Company</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="navbar-nav desktop-nav">
+        <ng-container *ngFor="let link of navLinks">
+          <a 
+            class="nav-link" 
+            [ngClass]="{'active-link': activeSection === link.href}"
+            (click)="scrollToSection(link.href)">
+            {{ link.name }}
+          </a>
+        </ng-container>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+        <i class="fa fa-bars" *ngIf="!isMenuOpen"></i>
+        <i class="fa fa-times" *ngIf="isMenuOpen"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div *ngIf="isMenuOpen" class="mobile-nav">
+      <div class="mobile-nav-content">
+        <ng-container *ngFor="let link of navLinks">
+          <a 
+            class="mobile-nav-link"
+            [ngClass]="{'active-link': activeSection === link.href}"
+            (click)="scrollToSection(link.href)">
+            {{ link.name }}
+          </a>
+        </ng-container>
       </div>
     </div>
-  </header>
+  </div>
+</header>
