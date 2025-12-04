@@ -147,6 +147,15 @@ export class ProjectsSectionComponent {
       technologies: ['Angular version 19,Typescript'],
       link: 'https://brilliantminds.vercel.app/#impact-details',
     },
+     {
+      id: 15,
+      title: 'Beifity',
+      description: 'Marketing campaign for Beifity, a marketplace for buyers and sellers.',
+      image: 'assets/Beifity.png',
+      category: 'marketing',
+      technologies: ['Trust Thursday','Posters'],
+      link: '',
+    },
   ];
 
   get filteredProjects() {

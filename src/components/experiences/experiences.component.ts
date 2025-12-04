@@ -13,7 +13,7 @@ export class ExperiencesSectionComponent {
   experiences: Experience[] = [
     {
       id: 1,
-      position: 'Graphic Designer & Branding Consultant',
+      position: 'Barbz & Co.Creative ',
       company: 'Self-employed',
       location: 'Kenya (Remote & On-site)',
       startDate: '2023',
@@ -45,6 +45,22 @@ export class ExperiencesSectionComponent {
     },
     {
       id: 3,
+      position: 'Graphic Designer & Creative',
+      company: 'Ngao Labs',
+      location: 'Remote',
+      startDate: 'August 2025',
+      endDate: 'Present',
+      current: true,
+      description: 'Worked as a graphic designer and creative contributor, focusing on visual content and branding projects.',
+      responsibilities: [
+        'Designed and produced visual content for various digital platforms',
+        'Collaborated with cross-functional teams to develop branding strategies',
+        'Participated in brainstorming sessions to generate innovative design ideas',
+        'Ensured consistency in brand messaging across all visual materials'
+      ]
+    },
+    {
+      id: 4,
       position: 'University Marketing & Mentorship Volunteer',
       company: 'Dedan Kimathi University of Technology',
       location: 'Nyeri, Kenya',
