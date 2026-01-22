@@ -45,3 +45,18 @@ Thumbs.db
 echo ".angular/" >> .gitignore
 echo "node_modules/" >> .gitignore
 echo "dist/" >> .gitignore
+
+# Open .gitignore in a text editor and add these lines at the bottom:
+notepad .gitignore
+```
+
+Add these lines:
+```
+# Large image files
+src/assets/ngao labs.png
+src/assets/ngaograd.png
+src/assets/application.png.env
+node_modules/
+.angular/
+
+.cache/
