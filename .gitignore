@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Add these to .gitignore
+echo ".angular/" >> .gitignore
+echo "node_modules/" >> .gitignore
+echo "dist/" >> .gitignore

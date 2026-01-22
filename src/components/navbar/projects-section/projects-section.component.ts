@@ -156,6 +156,33 @@ export class ProjectsSectionComponent {
       technologies: ['Trust Thursday','Posters'],
       link: '',
     },
+    {
+      id: 16,
+      title: 'Marketing Ngao Labs through graphics (A training program - Data Science and AI)',
+      description: 'Marketing campaign for Ngao Labs',
+      image: 'assets/ngao labs.png',
+      category: 'marketing',
+      technologies: ['Bronchure','Career Talk'],
+      link: '',
+    },
+    {
+      id: 17,
+      title: 'Marketing Ngao Labs through graphics (A training program - Data Science and AI)',
+      description: 'Marketing campaign for Ngao Labs graduation ceremony',
+      image: 'assets/ngaograd.png',
+      category: 'marketing',
+      technologies: ['Bronchure','Career Talk'],
+      link: '',
+    },
+    {
+      id: 18,
+      title: 'Marketing Ngao Labs through graphics (A training program - Data Science and AI)',
+      description: 'Marketing campaign for Ngao Labs call for applications',
+      image: 'assets/application.png',
+      category: 'marketing',
+      technologies: ['Bronchure','Career Talk'],
+      link: '',
+    },
   ];
 
   get filteredProjects() {
