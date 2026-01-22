@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule ,RouterOutlet} from '@angular/router';
@@ -14,10 +13,27 @@ import { SkillsSectionComponent } from 'src/components/navbar/skills-section/ski
 import { TestimonialsSectionComponent } from 'src/components/navbar/testimonials-section/testimonials-section.component';
 import { ChatbotComponent } from 'src/components/chatbot/chatbot.component';
 import { ExperiencesSectionComponent } from 'src/components/experiences/experiences.component';
+import { CapstoneProjectComponent } from '../../src/components/navbar/capstone-project/capstone-project.component'; 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterModule, NavbarComponent,AboutSectionComponent,CertificationsSectionComponent,ContactSectionComponent,FooterComponent,HeroSectionComponent,PhotoGalleryComponent,ProjectsSectionComponent,SkillsSectionComponent,TestimonialsSectionComponent,ExperiencesSectionComponent,ChatbotComponent],
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    NavbarComponent,
+    AboutSectionComponent,
+    CertificationsSectionComponent,
+    ContactSectionComponent,
+    FooterComponent,
+    HeroSectionComponent,
+    PhotoGalleryComponent,
+    ProjectsSectionComponent,
+    SkillsSectionComponent,
+    TestimonialsSectionComponent,
+    ExperiencesSectionComponent,
+    ChatbotComponent,
+    CapstoneProjectComponent 
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

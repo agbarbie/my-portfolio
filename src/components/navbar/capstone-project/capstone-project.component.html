@@ -1,0 +1,100 @@
+<section id="capstone-project" class="capstone-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="section-tag">
+        <i class="fa fa-graduation-cap"></i>
+        <span>Capstone Project</span>
+      </div>
+      <h2 class="section-title">
+        Final Year <span class="gradient-text">Project Showcase</span>
+      </h2>
+      <p class="section-description">
+        Comprehensive documentation and demonstration of my capstone project, including video presentations and detailed documentation.
+      </p>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <button 
+        class="tab-btn" 
+        [ngClass]="{'active': activeTab === 'videos'}"
+        (click)="setActiveTab('videos')">
+        <i class="fa fa-video"></i>
+        <span>Video Presentations</span>
+        <span class="tab-count">{{ videos.length }}</span>
+      </button>
+      <button 
+        class="tab-btn" 
+        [ngClass]="{'active': activeTab === 'documents'}"
+        (click)="setActiveTab('documents')">
+        <i class="fa fa-file-alt"></i>
+        <span>Documentation</span>
+        <span class="tab-count">{{ documents.length }}</span>
+      </button>
+    </div>
+
+    <!-- Videos Tab Content -->
+    <div class="tab-content" *ngIf="activeTab === 'videos'">
+      <div class="videos-grid">
+        <div class="video-card" *ngFor="let video of videos" (click)="openVideo(video)">
+          <div class="video-thumbnail">
+            <div class="thumbnail-gradient"></div>
+            <div class="play-overlay">
+              <i class="fa fa-play-circle"></i>
+            </div>
+            <div class="video-duration">Video</div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">{{ video.title }}</h3>
+            <p class="video-description">{{ video.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents Tab Content -->
+    <div class="tab-content" *ngIf="activeTab === 'documents'">
+      <div class="documents-grid">
+        <div class="document-card" *ngFor="let doc of documents">
+          <div class="document-icon">
+            <i class="fa" [ngClass]="doc.icon"></i>
+          </div>
+          <div class="document-info">
+            <h3 class="document-title">{{ doc.title }}</h3>
+            <p class="document-description">{{ doc.description }}</p>
+            <div class="document-meta">
+              <span class="document-type">{{ doc.type }}</span>
+            </div>
+          </div>
+          <button class="download-btn" (click)="downloadDocument(doc)">
+            <i class="fa fa-download"></i>
+            <span>Download</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal" *ngIf="selectedVideo" (click)="closeVideo()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeVideo()">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>{{ selectedVideo.title }}</h3>
+        <p>{{ selectedVideo.description }}</p>
+      </div>
+      <div class="video-container">
+        <!-- Replace with your video embed code -->
+        <iframe 
+          [src]="selectedVideo.url" 
+          frameborder="0" 
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>

@@ -18,9 +18,10 @@ export class NavbarComponent {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experiences' }, // ✅ fixed to match section id
+    { name: 'Experience', href: '#experiences' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#certifications' },
+    { name: 'Education & Certificates', href: '#certifications' },
+    { name: 'Capstone Project', href: '#capstone-project' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -47,10 +48,26 @@ export class NavbarComponent {
   }
 
   scrollToSection(sectionId: string) {
-    const el = document.querySelector(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Remove the # if it exists
+    const id = sectionId.startsWith('#') ? sectionId.substring(1) : sectionId;
+    
+    // Find the element
+    const element = document.getElementById(id);
+    
+    if (element) {
+      // Get navbar height for offset
+      const navbarHeight = 80; // Adjust this if your navbar has a different height
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    } else {
+      console.warn(`Element with id "${id}" not found. Make sure the section exists in your HTML.`);
     }
+    
     this.isMenuOpen = false; // close mobile nav after click
   }
 }
