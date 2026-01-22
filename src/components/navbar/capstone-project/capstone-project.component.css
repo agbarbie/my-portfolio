@@ -167,14 +167,26 @@
   background: linear-gradient(135deg, #1f2937, #111827);
 }
 
-.video-thumbnail img {
+.video-preview-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 
-.video-card:hover .video-thumbnail img {
+.video-card:hover .video-preview-img {
+  transform: scale(1.05);
+}
+
+.thumbnail-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(234, 88, 12, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .thumbnail-gradient {
   transform: scale(1.05);
 }
 
@@ -302,10 +314,6 @@
   border-radius: 0.25rem;
   color: #a78bfa;
   font-weight: 500;
-}
-
-.document-divider {
-  color: #4b5563;
 }
 
 .download-btn {

@@ -39,7 +39,11 @@
       <div class="videos-grid">
         <div class="video-card" *ngFor="let video of videos" (click)="openVideo(video)">
           <div class="video-thumbnail">
-            <div class="thumbnail-gradient"></div>
+            <img 
+              [src]="getVideoThumbnail(video.url)" 
+              [alt]="video.title"
+              class="video-preview-img"
+              (error)="onImageError($event)">
             <div class="play-overlay">
               <i class="fa fa-play-circle"></i>
             </div>
@@ -87,9 +91,10 @@
         <p>{{ selectedVideo.description }}</p>
       </div>
       <div class="video-container">
-        <!-- Replace with your video embed code -->
+        <!-- Using sanitized URL -->
         <iframe 
-          [src]="selectedVideo.url" 
+          *ngIf="safeVideoUrl"
+          [src]="safeVideoUrl" 
           frameborder="0" 
           allowfullscreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">

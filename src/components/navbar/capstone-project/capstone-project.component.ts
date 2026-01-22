@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Video {
   id: string;
@@ -28,13 +29,16 @@ interface Document {
 export class CapstoneProjectComponent {
   activeTab: 'videos' | 'documents' = 'videos';
   selectedVideo: Video | null = null;
+  safeVideoUrl: SafeResourceUrl | null = null;
+
+  constructor(private sanitizer: DomSanitizer) {}
 
   videos: Video[] = [
     {
       id: 'video1',
       title: 'Digi-Mirror Presentation - English',
       description: 'Empowering everyday people to discover, design, and own their digital identity with confidence.',
-      url: 'YOUR_VIDEO_URL_1'
+      url: 'https://drive.google.com/file/d/13-oReksiFMBayVzNbAeIU1s6mMtKOutj/preview'
     },
     {
       id: 'video2',
@@ -46,7 +50,7 @@ export class CapstoneProjectComponent {
       id: 'video3',
       title: 'African Culture Aspect - English',
       description: 'Exploring how centuries of African symbolic communication shapes modern UI/UX and graphic design principles.',
-      url: 'YOUR_VIDEO_URL_3'
+      url: 'https://drive.google.com/file/d/13GgkY__PbFQEwC0d9fsPAgNInj29EPk-/preview'
     },
     {
       id: 'video4',
@@ -58,13 +62,13 @@ export class CapstoneProjectComponent {
       id: 'video5',
       title: 'Photographic Essay - English',
       description: 'This digital gap impacts education quality, entrepreneurial opportunities, healthcare access, and social mobility, leaving entire communities behind in an increasingly connected world.',
-      url: 'YOUR_VIDEO_URL_5'
+      url: 'https://drive.google.com/file/d/13GxfWiizV9iHf1z-DR3SYozpl6IBpPGF/preview'
     },
     {
       id: 'video6',
       title: 'Photographic Essay - Kiswahili',
       description: 'Pengo hili la kidijitali linaathiri ubora wa elimu, fursa za ujasiriamali, upatikanaji wa huduma za afya, na uhamaji wa kijamii, na kuacha jamii nzima nyuma katika ulimwengu unaoongezeka kuunganishwa.',
-      url: 'YOUR_VIDEO_URL_6'
+      url: ''
     }
   ];
 
@@ -73,65 +77,57 @@ export class CapstoneProjectComponent {
       id: 'doc1',
       title: 'CV - English Version',
       description: 'Complete curriculum vitae in English',
-      type: 'PDF',
-      url: 'YOUR_ENGLISH_CV_URL',
-      icon: 'fa-file-pdf'
+      type: 'WORD',
+      url: 'https://docs.google.com/document/d/1snPXhePyvGmR4dXXbFc8gCZZE9nvyPSS/edit?usp=sharing&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-word'
     },
     {
       id: 'doc2',
-      title: 'CV - French Version',
-      description: 'Curriculum vitae complet en français',
-      type: 'PDF',
-      url: 'YOUR_FRENCH_CV_URL',
-      icon: 'fa-file-pdf'
+      title: 'CV - Kiswahili Version',
+      description: 'Curriculum vitae kamili kwa Kiswahili',
+      type: 'WORD',
+      url: 'https://docs.google.com/document/d/1IfnzJoOMa-qoAkwbodo-ceFe7QMaHh5x/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-word'
     },
     {
       id: 'doc3',
-      title: 'Project Proposal',
-      description: 'Initial project proposal and scope definition',
-      type: 'PDF',
-      url: 'YOUR_DOCUMENT_URL_3',
-      icon: 'fa-file-pdf'
+      title: 'Autobiography',
+      description: 'My Autobiography',
+      type: 'WORD',
+      url: 'https://docs.google.com/document/d/1g0DYMwlgqAs_ZXrLdOSDGNLmPBfKkIGH/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-word'
     },
     {
       id: 'doc4',
-      title: 'Technical Documentation',
+      title: 'Autobiography Presentation',
       description: 'Complete technical documentation and API references',
-      type: 'PDF',
-      url: 'YOUR_DOCUMENT_URL_4',
-      icon: 'fa-file-pdf'
+      type: 'PPT',
+      url: 'https://docs.google.com/presentation/d/1lUiYdpKvLgSQWiiMUWdYNuag7uEEy5tj/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-powerpoint'
     },
     {
       id: 'doc5',
-      title: 'Research Paper',
-      description: 'Academic research paper and literature review',
-      type: 'PDF',
-      url: 'YOUR_DOCUMENT_URL_5',
-      icon: 'fa-file-pdf'
+      title: 'Digi-Mirror',
+      description: 'Empowering everyday people to discover, design, and own their digital identity with confidence.',
+      type: 'PPT',
+      url: 'https://docs.google.com/presentation/d/1Szhtb7SjiRnwV6YLftQ3B1IaPk5Uy-IU/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-powerpoint'
     },
     {
       id: 'doc6',
-      title: 'User Manual',
-      description: 'End-user guide and documentation',
-      type: 'PDF',
-      url: 'YOUR_DOCUMENT_URL_6',
-      icon: 'fa-file-pdf'
+      title: 'African Culture Aspect',
+      description: 'Exploring how centuries of African symbolic communication shapes modern UI/UX and graphic design principles.',
+      type: 'PPT',
+      url: 'https://docs.google.com/presentation/d/1ZMzhuA7o6-n0S1y4It0KNbEMoucrtzG5/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-powerpoint'
     },
     {
       id: 'doc7',
-      title: 'Source Code Repository',
-      description: 'Complete source code and project files',
-      type: 'ZIP',
-      url: 'YOUR_DOCUMENT_URL_7',
-      icon: 'fa-file-archive'
-    },
-    {
-      id: 'doc8',
-      title: 'Final Report',
-      description: 'Comprehensive final project report and evaluation',
-      type: 'PDF',
-      url: 'YOUR_DOCUMENT_URL_8',
-      icon: 'fa-file-pdf'
+      title: 'Photographic Essay',
+      description: 'This digital gap impacts education quality, entrepreneurial opportunities, healthcare access, and social mobility, leaving entire communities behind in an increasingly connected world.',
+      type: 'PPT',
+      url: 'https://docs.google.com/presentation/d/1OjF_9xZfE9cIguSwAmgbtEB0CfcumNH2/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-powerpoint'
     }
   ];
 
@@ -141,14 +137,34 @@ export class CapstoneProjectComponent {
 
   openVideo(video: Video) {
     this.selectedVideo = video;
+    // Sanitize the URL so Angular trusts it
+    this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(video.url);
   }
 
   closeVideo() {
     this.selectedVideo = null;
+    this.safeVideoUrl = null;
+  }
+
+  getVideoThumbnail(url: string): string {
+    // Extract file ID from Google Drive URL
+    const match = url.match(/\/d\/([^\/]+)\//);
+    if (match && match[1]) {
+      const fileId = match[1];
+      // Use Google Drive thumbnail API
+      return `https://drive.google.com/thumbnail?id=${fileId}&sz=w400`;
+    }
+    // Fallback to a default image if URL doesn't match
+    return 'assets/default-video-thumb.jpg';
+  }
+
+  onImageError(event: any) {
+    // Fallback to gradient background if thumbnail fails to load
+    event.target.style.display = 'none';
+    event.target.parentElement.style.background = 'linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(234, 88, 12, 0.3))';
   }
 
   downloadDocument(doc: Document) {
-    // Implement download logic
     window.open(doc.url, '_blank');
   }
 }
