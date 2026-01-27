@@ -122,12 +122,12 @@ export class ProjectsSectionComponent {
     },
     {
       id: 12,
-      title: 'SkillmatchesAI',
-      description: 'A library management system that allows users to search, borrow, and return books online.',
-      image: 'assets/ux.png',
+      title: 'Digital Skilling  App',
+      description: 'A digital skilling app that provides users with access to various online courses and resources.',
+      image: 'assets/DSApp.png',
       category: 'development',
       technologies: ['Express,Angular version 19,Typescript'],
-      link: '',
+      link: 'https://rural-connect-frontend-511q.onrender.com/#/',
     },
     {
       id: 13,
