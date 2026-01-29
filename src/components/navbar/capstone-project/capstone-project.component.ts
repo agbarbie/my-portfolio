@@ -110,6 +110,14 @@ export class CapstoneProjectComponent {
       type: 'PPT',
       url: 'https://docs.google.com/presentation/d/1OjF_9xZfE9cIguSwAmgbtEB0CfcumNH2/edit?usp=drive_link&ouid=103354002324122913916&rtpof=true&sd=true',
       icon: 'fa-file-powerpoint'
+    },
+    {
+      id: 'doc8',
+      title: 'Professional Platform Evidences',
+      description: 'A compilation of my professional screenshots and links on various platforms.',
+      type: 'WORD',
+      url: 'https://docs.google.com/document/d/1CptSPHyPizFBFsnoPaTBc3VXL2pBdxK6/edit?usp=sharing&ouid=103354002324122913916&rtpof=true&sd=true',
+      icon: 'fa-file-word'
     }
   ];
 
