@@ -41,22 +41,10 @@ export class CapstoneProjectComponent {
       url: 'https://drive.google.com/file/d/13-oReksiFMBayVzNbAeIU1s6mMtKOutj/preview'
     },
     {
-      id: 'video2',
-      title: 'Digi-Mirror Presentation - Kiswahili',
-      description: 'Kuwapa nguvu watu wa kawaida kugundua, kubuni, na kumiliki utambulisho wao wa kidijitali kwa ujasiri.',
-      url: 'YOUR_VIDEO_URL_2'
-    },
-    {
       id: 'video3',
       title: 'African Culture Aspect - English',
       description: 'Exploring how centuries of African symbolic communication shapes modern UI/UX and graphic design principles.',
       url: 'https://drive.google.com/file/d/13GgkY__PbFQEwC0d9fsPAgNInj29EPk-/preview'
-    },
-    {
-      id: 'video4',
-      title: 'African Culture Aspect - Kiswahili',
-      description: 'Kuchunguza jinsi mawasiliano ya alama za Kiafrika ya karne nyingi yanavyounda kanuni za kisasa za UI/UX na kubuni michoro.',
-      url: 'YOUR_VIDEO_URL_4'
     },
     {
       id: 'video5',
@@ -64,12 +52,6 @@ export class CapstoneProjectComponent {
       description: 'This digital gap impacts education quality, entrepreneurial opportunities, healthcare access, and social mobility, leaving entire communities behind in an increasingly connected world.',
       url: 'https://drive.google.com/file/d/13GxfWiizV9iHf1z-DR3SYozpl6IBpPGF/preview'
     },
-    {
-      id: 'video6',
-      title: 'Photographic Essay - Kiswahili',
-      description: 'Pengo hili la kidijitali linaathiri ubora wa elimu, fursa za ujasiriamali, upatikanaji wa huduma za afya, na uhamaji wa kijamii, na kuacha jamii nzima nyuma katika ulimwengu unaoongezeka kuunganishwa.',
-      url: ''
-    }
   ];
 
   documents: Document[] = [
