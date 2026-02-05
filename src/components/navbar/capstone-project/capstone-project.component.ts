@@ -36,21 +36,21 @@ export class CapstoneProjectComponent {
   videos: Video[] = [
     {
       id: 'video1',
-      title: 'Digi-Mirror Presentation - English',
+      title: 'Invention - Digi-Mirror',
       description: 'Empowering everyday people to discover, design, and own their digital identity with confidence.',
       url: 'https://drive.google.com/file/d/13-oReksiFMBayVzNbAeIU1s6mMtKOutj/preview'
     },
     {
       id: 'video3',
-      title: 'African Culture Aspect - English',
+      title: 'African Culture Aspect - African Culture and Design',
       description: 'Exploring how centuries of African symbolic communication shapes modern UI/UX and graphic design principles.',
-      url: 'https://drive.google.com/file/d/13GgkY__PbFQEwC0d9fsPAgNInj29EPk-/preview'
+      url: 'https://drive.google.com/file/d/18geQvIP7gAMj1ixioyShax_qbTyIKER9/preview'
     },
     {
       id: 'video5',
-      title: 'Photographic Essay - English',
+      title: 'Photographic Essay - Digital Inclusion',
       description: 'This digital gap impacts education quality, entrepreneurial opportunities, healthcare access, and social mobility, leaving entire communities behind in an increasingly connected world.',
-      url: 'https://drive.google.com/file/d/13GxfWiizV9iHf1z-DR3SYozpl6IBpPGF/preview'
+      url: 'https://drive.google.com/file/d/18j4C5XGnIYhBhdA4h-WD34fsXplPToo5/preview'
     },
   ];
 
