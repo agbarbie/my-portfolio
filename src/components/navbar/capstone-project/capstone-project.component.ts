@@ -38,7 +38,7 @@ export class CapstoneProjectComponent {
       id: 'video1',
       title: 'Invention - Digi-Mirror',
       description: 'Empowering everyday people to discover, design, and own their digital identity with confidence.',
-      url: 'https://drive.google.com/file/d/13-oReksiFMBayVzNbAeIU1s6mMtKOutj/preview'
+      url: 'https://drive.google.com/file/d/196vj5q1KRSwMPNvtOFkUESJkp0b3DNgO/preview'
     },
     {
       id: 'video3',
