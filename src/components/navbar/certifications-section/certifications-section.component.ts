@@ -54,6 +54,14 @@ export class CertificationsSectionComponent {
       date: '2023',
       image: 'assets/EFSET.png',
       link: 'https://drive.google.com/file/d/18qysJZ2LtzREFOFJXH94G1Xj5L4_co_h/view?usp=sharing',
+    },
+    {
+      id: 6,
+      title: 'Frontend Development Certification',
+      organization: 'TRUEMINDS INNOVATION LTD',
+      date: '2026',
+      image: 'assets/trueminds.png',
+      link: 'https://drive.google.com/file/d/1tRH-99pzBAUdMgFWqQYciZD9hZHoxV5b/view?usp=sharing',
     }
   ];
 
