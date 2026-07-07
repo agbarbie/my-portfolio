@@ -1,0 +1,17 @@
+<div class="gallery-container">
+    <!-- Gradient overlays for fade effect -->
+    <div class="fade-left"></div>
+    <div class="fade-right"></div>
+  
+    <div class="photo-gallery">
+      <div class="photo-scroll">
+        <div *ngFor="let image of allImages; let i = index" class="gallery-item">
+          <img [src]="image.src" [alt]="image.alt" class="gallery-image">
+          <div class="image-overlay">
+            <p class="image-caption">{{ image.alt }}</p>
+          </div>
+          <div class="image-border"></div>
+        </div>
+      </div>
+    </div>
+  </div>

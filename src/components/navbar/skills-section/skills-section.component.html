@@ -1,0 +1,117 @@
+<section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">Skills & <span class="highlight">Tools</span></h2>
+        <p class="section-description">
+          My expertise spans across design, development, and marketing, allowing me to create comprehensive digital
+          solutions that address all aspects of your online presence.
+        </p>
+      </div>
+  
+      <div class="skills-grid">
+        <!-- Design Skills -->
+        <div class="skill-card">
+          <div class="skill-icon design-icon">
+            <!-- figma icon -->
+             <i class="fa-brands fa-figma icon"></i>
+          </div>
+          <h3 class="skill-title">Design</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of designSkills" class="skill-item">
+              <div class="skill-header">
+                 <i class="fa-brands fa-figma icon"></i>
+                <div class="skill-name">
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress design-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Development Skills -->
+        <div class="skill-card">
+          <div class="skill-icon dev-icon">
+            <i class="fa-solid fa-code icon"></i>
+          </div>
+          <h3 class="skill-title">Development</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of developmentSkills" class="skill-item">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="fa-solid fa-code icon"></i>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress dev-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Marketing Skills -->
+        <div class="skill-card">
+          <div class="skill-icon marketing-icon">
+            <i class="fa-solid fa-shop icon"></i>
+          </div>
+          <h3 class="skill-title">Marketing</h3>
+  
+          <div class="skill-list">
+            <div *ngFor="let skill of marketingSkills" class="skill-item">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="fa-solid fa-shop icon"></i>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress marketing-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analysis Skills -->
+<div class="skill-card">
+  <div class="skill-icon data-icon">
+    <i class="fa-solid fa-database icon"></i>
+  </div>
+  <h3 class="skill-title">Data Analysis</h3>
+
+  <div class="skill-list">
+    <div *ngFor="let skill of dataSkills" class="skill-item">
+      <div class="skill-header">
+        <div class="skill-name">
+          <i class="fa-solid fa-database icon"></i>
+          <span>{{ skill.name }}</span>
+        </div>
+        <span class="skill-percentage">{{ skill.level }}%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress data-progress" [style.width.%]="skill.level"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+      <!-- Tools -->
+      <div class="tools-section">
+        <h3 class="tools-title">Tools & Technologies</h3>
+        <div class="tools-list">
+          <span *ngFor="let tool of tools" class="tool-tag">
+            {{ tool }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>

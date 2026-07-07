@@ -1,0 +1,80 @@
+<section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="glow-text">My <span class="highlight">Projects</span></h2>
+        <p class="section-description">
+          Browse through my recent projects spanning design, development, and marketing. Each project represents my
+          commitment to excellence and innovation.
+        </p>
+      </div>
+  
+      <!-- Filter Categories -->
+      <div class="filter-categories">
+        <button
+          *ngFor="let category of categories"
+          (click)="setActiveCategory(category.id)"
+          class="filter-btn"
+          [ngClass]="{'active-filter': activeCategory === category.id}"
+        >
+          {{ category.name }}
+        </button>
+      </div>
+  
+      <!-- WhatsApp Design Catalog CTA -->
+      <div class="whatsapp-catalog-banner">
+        <div class="whatsapp-banner-content">
+          <div class="whatsapp-banner-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="whatsapp-banner-text">
+            <h3>Want to see more design work?</h3>
+            <p>Browse my full design portfolio catalog on WhatsApp</p>
+          </div>
+        </div>
+        <a href="https://wa.me/c/254705524140" target="_blank" rel="noopener noreferrer" class="whatsapp-banner-btn">
+          <i class="fa-brands fa-whatsapp"></i>
+          View WhatsApp Catalog
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <div
+          *ngFor="let project of filteredProjects"
+          class="project-card"
+        >
+          <div class="project-image-container">
+            <img [src]="project.image" [alt]="project.title" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech">
+                <span *ngFor="let tech of project.technologies" class="tech-tag">
+                  {{ tech }}
+                </span>
+              </div>
+              <a [href]="project.link" class="project-link">
+                View Project 
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">
+              <span class="category-dot" [ngClass]="getCategoryClass(project.category)"></span>
+              <span class="category-name">{{ project.category }}</span>
+            </div>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- View All Projects Button -->
+      <div class="view-all">
+        <button class="btn btn-primary glow">
+          View All Projects
+          <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
